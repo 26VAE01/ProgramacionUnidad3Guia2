@@ -1,0 +1,32 @@
+Algoritmo Leccion17_Actividad2Inciso1
+	// Variables para recorrer las filas y columnas
+	Definir numerofila, numerocolumna Como Entero
+	
+	// Creamos la matriz de 4 filas por 4 columnas
+	Definir matrizIdentidad Como Entero
+	Dimension matrizIdentidad[4,4]
+	
+	// Recorremos toda la matriz
+	Para numerofila <- 1 Hasta 4 Hacer
+		Para numerocolumna <- 1 Hasta 4 Hacer
+			// Si la fila y la columna son iguales,
+			// estamos sobre la diagonal principal
+			Si numerofila = numerocolumna Entonces
+				// Colocamos un 1 en la diagonal
+				matrizIdentidad[numerofila,numerocolumna] <- 1
+			SiNo
+				// En las demás posiciones colocamos 0
+				matrizIdentidad[numerofila,numerocolumna] <- 0
+			FinSi
+		FinPara
+	FinPara
+	
+	// Mostramos cómo quedó la matriz
+	Escribir "Matriz Identidad"
+	Para numerofila <- 1 Hasta 4 Hacer
+		Para numerocolumna <- 1 Hasta 4 Hacer
+			Escribir Sin Saltar matrizIdentidad[numerofila,numerocolumna], " "
+		FinPara
+		Escribir ""
+	FinPara
+FinAlgoritmo
