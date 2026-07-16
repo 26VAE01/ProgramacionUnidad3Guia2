@@ -1,0 +1,23 @@
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[,] tabla = new int[4, 3];
+
+        for (int fila = 0; fila < 4; fila++)
+        {
+            int suma = 0;
+            for (int columna = 0; columna < 3; columna++)
+            {
+                Console.Write("Ingrese un número: ");
+                int num = int.Parse(Console.ReadLine());
+                tabla[fila, columna] = num;
+                suma += num;
+            }
+            Console.WriteLine("La suma de la fila " + (fila + 1) + " es: " + suma);
+        }
+    }
+}
